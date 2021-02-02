@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
-import { RestaurantsModules } from '../src/restaurants/restaurants.module';
+import { RestaurantsModules } from './restaurants/restaurants.module';
 
 @Module({
   imports: [RestaurantsModules],
