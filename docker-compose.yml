@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres-dev: #servidor
+    image: postgres:11
+    environment:
+      POSTGRES_USER: restaurantUser
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: restaurantDB
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres-dev
